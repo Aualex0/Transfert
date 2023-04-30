@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css?6" />
+    <link rel="icon" type="image/png" href="images/icon.png" />
+    <title>Point Gamma 2023</title>
+    <meta
+      name="description"
+      content="Le Point Gamma est le festival de l'Ecole polytechnique. Cette année, il se déroule le 2 Juin 2023 à Palaiseau. Inscrivez-vous vite !"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="color-scheme" content="light" />
+
+    <script>
+      function updateCountdown() {
+        // Set the date we're counting down to
+        var countDownDate = new Date("June 2, 2023 19:00:00").getTime();
+
+        // Get the current date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the countdown date
+        var distance = countDownDate - now;
+
+        // Calculate remaining days, hours, and minutes
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Update the HTML elements with the remaining time
+        document.getElementById("diz_jours").innerHTML = Math.floor(days / 10);
+        document.getElementById("unit_jours").innerHTML = days % 10;
+        document.getElementById("diz_heures").innerHTML = Math.floor(
+          hours / 10
+        );
+        document.getElementById("unit_heures").innerHTML = hours % 10;
+        document.getElementById("diz_mins").innerHTML = Math.floor(
+          minutes / 10
+        );
+        document.getElementById("unit_mins").innerHTML = minutes % 10;
+        document.getElementById("diz_s").innerHTML = Math.floor(seconds / 10);
+        document.getElementById("unit_s").innerHTML = seconds % 10;
+
+        // If the countdown is finished, display a message
+        if (distance < 0) {
+          clearInterval(countdownInterval);
+          document.getElementById("compte-rebours").innerHTML =
+            "Countdown finished!";
+        }
+      }
+
+      // Call the updateCountdown function every second
+      var countdownInterval = setInterval(updateCountdown, 1000);
+    </script>
+  </head>
+
+  <body>
+    <header id="presentation">
+      <div id="up_part">
+        <div id="title">
+          <img
+            src="images/logo2.png"
+            id="main_logo"
+            alt="Logo Point Gamma 2023"
+          />
+          <img src="images/titre.png" id="main_titre" alt="POINT GAMMA" />
+        </div>
+        <div id="details">
+          <!--<ul>
+						<li>ACCUEIL</li>
+						<li>INFOS</li>
+					</ul>-->
+
+          <div id="compte-rebours">
+            <span id="diz_jours">2</span><span id="unit_jours">2</span
+            ><span class="compte_indice">Jours</span>
+            <span id="diz_heures">1</span><span id="unit_heures">1</span
+            ><span class="compte_indice">Heures</span>
+            <span id="diz_mins">2</span><span id="unit_mins">2</span
+            ><span class="compte_indice">Mins</span> <span id="diz_s">5</span
+            ><span id="unit_s">5</span><span class="compte_indice">Secs</span>
+          </div>
+          <div id="precisions_big_screen">
+            <p class="date">2 JUIN 2023</p>
+            <p class="location">
+              <a
+                rel="nofollow"
+                href="https://www.google.com/maps/place/%C3%89cole+Polytechnique/@48.7114153,2.2093812,15.25z/data=!4m5!3m4!1s0x47e6788dd891b127:0x43c2be8ce6d1821e!8m2!3d48.7142971!4d2.2112917"
+                >Ecole polytechnique, PALAISEAU</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="precisions_small_screen">
+        <p class="date">2 JUIN 2023</p>
+        <p class="location">
+          <a
+            rel="nofollow"
+            href="https://www.google.com/maps/place/%C3%89cole+Polytechnique/@48.7114153,2.2093812,15.25z/data=!4m5!3m4!1s0x47e6788dd891b127:0x43c2be8ce6d1821e!8m2!3d48.7142971!4d2.2112917"
+            >Ecole polytechnique, PALAISEAU</a
+          >
+        </p>
+      </div>
+      <button class="mobile_button">
+        <a
+          href="https://shotgun.live/festivals/point-gamma-2023?embedded=true&ui=dark"
+          >Billetterie</a
+        >
+      </button>
+      <button class="laptop_button" id="button_inscription">
+        Reservez ici !
+      </button>
+      <div id="reseaux">
+        <div id="facebook">
+          <img src="images/reseaux/fb.png" alt="Facebook" />
+          <p><a href="https://www.facebook.com/PointGamma">Point Gamma</a></p>
+        </div>
+        <div id="insta">
+          <img src="images/reseaux/insta.png" alt="Instagram" />
+          <p>
+            <a href="https://www.instagram.com/pointgamma2023/"
+              >pointgamma2023</a
+            >
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <div class="separator">
+      <div class="line"></div>
+      <img class="logo" src="images/logo2.png" alt="Logo Point Gamma 2022" />
+      <div class="line"></div>
+    </div>
+
+    <article id="description">
+      <h2>INFOS</h2>
+      <div class="horizontal_container">
+        <p>
+          Le Point Gamma revient cette année pour sa 160e édition ! Plus ancien
+          gala étudiant de France, organisé par les élèves de première année de
+          l'École Polytechnique, il rassemble plus de 5000 étudiants. <br />
+          On vous attend avec impatience le vendredi 2 juin, pour une soirée
+          mémorable.
+        </p>
+        <!--<img src="images/description.jpg" id="photo_descript"/>-->
+        <div class="vertical_container">
+          <div id="mosaique">
+            <div id="mosaique1">
+              <div id="mosaique11">
+                <div id="mosaique111" class="mosaique_photo"></div>
+                <div id="mosaique112">
+                  <div id="mosaique1121" class="mosaique_photo"></div>
+                  <div id="mosaique1122" class="mosaique_photo"></div>
+                </div>
+              </div>
+              <div id="mosaique12" class="mosaique_photo"></div>
+            </div>
+            <div id="mosaique2" class="mosaique_photo"></div>
+            <div id="mosaique3">
+              <div id="mosaique31" class="mosaique_photo"></div>
+              <div id="mosaique32" class="mosaique_photo"></div>
+            </div>
+          </div>
+          <p id="mosaique_credits">Edition 2022 - Crédits Binet Photo</p>
+        </div>
+      </div>
+      <p id="legal">
+        Soirée Interdite aux mineurs - Pièce d'identité obligatoire <br />
+        L'organisation se réserve le droit d'entrée
+      </p>
+      <p id="transports">
+        Transports
+        <br />
+        RER B : Arrêt Lozère ou RER B/C: Arrêt Massy-Palaiseau puis Bus 91.10 ou
+        91.06
+        <br />
+        Premier RER à 5h pour retourner vers Paris
+        <br />
+        Des navettes avec des écoles alentour (aller et retour) et Paris (retour
+        uniquement) seront organisées
+      </p>
+      <!--button class="mobile_button">
+        <a
+          href=""
+          >Inscription navettes</a
+        >
+      </button>
+      <button class="laptop_button" id="button_navettes">
+        Inscription navettes
+      </button-->
+    </article>
+
+    <div class="separator">
+      <div class="line"></div>
+      <img class="logo" src="images/logo2.png" alt="Logo Point Gamma 2022" />
+      <div class="line"></div>
+    </div>
+
+    <article id="line_up">
+      <h2>LINE-UP</h2>
+
+      <div id="liste_artistes">
+        <div class="artiste" id="artiste1">
+          <div class="artiste_text">
+            <h3 class="artiste_name">Airmow</h3>
+            <p class="artiste_description">Électro - Melodic Techno</p>
+          </div>
+          <div class="artiste_photo"></div>
+        </div>
+        <div class="artiste" id="artiste2">
+          <div class="artiste_text">
+            <h3 class="artiste_name">Honey & Badger</h3>
+            <p class="artiste_description">Électro - House</p>
+          </div>
+          <div class="artiste_photo"></div>
+        </div>
+        <div class="artiste" id="artiste3">
+          <div class="artiste_text">
+            <h3 class="artiste_name">Artiste 3</h3>
+            <p class="artiste_description">À venir...</p>
+          </div>
+          <div class="artiste_photo"></div>
+        </div>
+      </div>
+    </article>
+
+    <div class="separator">
+      <div class="line"></div>
+      <img class="logo" src="images/logo2.png" alt="Logo Point Gamma 2023" />
+      <div class="line"></div>
+    </div>
+
+    <footer>
+      <h2>SPONSORS</h2>
+      <div id="logos">
+        <img class="logos" src="images/sponsors/Artefact.png" alt="Artefact" />
+        <img class="logos" src="images/sponsors/BNP.png" alt="BNP Paribas" />
+        <img class="logos" src="images/sponsors/ip-paris.png" alt="IP Paris" />
+        <img
+          class="logos"
+          src="images/sponsors/Carlsberg.png"
+          alt="Carlsberg"
+        />
+        <img class="logos" src="images/sponsors/kes.png" alt="Kès" />
+        <img class="logos" src="images/sponsors/XForum.png" alt="XForum" />
+        <!--<img
+          class="logos"
+          src="images/sponsors/Capgemini_Logo.png"
+          alt="Capgemini"
+        />-->
+        <img class="logos" src="images/sponsors/LCL.png" alt="LCL" />
+        <img class="logos" src="images/sponsors/Lydia2.png" alt="Lydia" />
+        <img class="logos" src="images/sponsors/TEGO.png" alt="TEGO" />
+        <img class="logos" src="images/sponsors/Bain.png" alt="Bain" />
+      </div>
+      <!-- mettre les logos quand on connaitra les sponsors-->
+    </footer>
+
+    <div id="navettes_popup" class="popup-container">
+      <div class="popup">
+        <iframe
+          src="https://yurplan.com/event/Navette-Point-Gamma-2022/83837/tickets/widget?widget=dGlja2V0aW5nV2lkZ2V0WXBfODE4NzhfODQ3MDk%3D&from=widget_84709&wversion=1&culture=fr"
+          frameborder="0"
+          scrolling="auto"
+        ></iframe>
+        <button class="ferme_popup">X</button>
+      </div>
+    </div>
+    <div id="inscription_popup" class="popup-container">
+      <div class="popup">
+        <iframe
+          src="https://shotgun.live/festivals/point-gamma-2023?embedded=true&ui=dark"
+          style="width: 100%; height: 800px; max-height: calc(100vh - 200px)"
+          frameborder="0"
+          scrolling="0"
+        ></iframe>
+        <button class="ferme_popup">X</button>
+      </div>
+    </div>
+
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <script src="http://code.jquery.com/color/jquery.color-2.1.2.js"></script>
+    <script src="scripts/countdown.js"></script>
+    <script src="scripts/popup.js"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Point Gamma",
+        "url": "https://pointgamma.fr",
+        "logo": "https://pointgamma.fr/images/logo2.png"
+      }
+    </script>
+  </body>
+</html>
